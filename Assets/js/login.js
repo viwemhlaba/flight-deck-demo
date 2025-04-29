@@ -1,4 +1,3 @@
-// Assets/js/login.js
 import { users } from 'https://viwemhlaba.github.io/flight-deck-demo/Assets/js/users.js';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -12,12 +11,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     loginForm.addEventListener('submit', (event) => {
-        event.preventDefault(); // Prevent the default form submission
+        event.preventDefault();
 
         const enteredUsername = usernameInput.value.trim();
         const enteredPassword = passwordInput.value;
 
-        // --- Basic Validation ---
         if (!enteredUsername || !enteredPassword) {
             Swal.fire({
                 icon: 'warning',
@@ -28,29 +26,22 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // --- Find User (INSECURE CHECK) ---
         const foundUser = users.find(user =>
-            (user.email === enteredUsername || user.name === enteredUsername) && // Allow login with email or name
-            user.password === enteredPassword // Direct password comparison (INSECURE!)
+            (user.email === enteredUsername || user.name === enteredUsername) && 
+            user.password === enteredPassword 
         );
 
         if (foundUser) {
-            // --- Login Successful ---
             console.log('Login successful for:', foundUser.name);
-
-            // Store user info (excluding password) in sessionStorage
-            // sessionStorage is cleared when the browser tab is closed
             sessionStorage.setItem('loggedInUser', JSON.stringify({
                 name: foundUser.name,
                 email: foundUser.email,
                 permissions: foundUser.permissions
             }));
 
-            // Redirect to the main index page
-            window.location.href = 'login.html'; // Or '/login.html' depending on your setup
+            window.location.href = 'login.html';
 
         } else {
-            // --- Login Failed ---
             console.warn('Login failed for:', enteredUsername);
             Swal.fire({
                 icon: 'error',
@@ -58,7 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 text: 'Invalid username/email or password.',
                 confirmButtonColor: '#d33'
             });
-            // Optionally clear the password field
             passwordInput.value = '';
         }
     });
