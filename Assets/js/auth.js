@@ -53,7 +53,7 @@ export function loginUser(username, password) {
 export function logoutUser() {
     sessionStorage.removeItem('loggedInUser');
     console.log("User logged out. Redirecting to index.html");
-    window.location.replace('/index.html');
+    window.location.replace('https://viwemhlaba.github.io/flight-deck-demo/');
 }
 
 // Optional: Add a logout button listener somewhere in your main UI (e.g., in main.js)
