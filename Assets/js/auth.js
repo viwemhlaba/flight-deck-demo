@@ -1,5 +1,4 @@
-// Assets/js/auth.js
-import { users } from './users.js'; // Assuming users are still needed for login
+import { users } from '/users.js';
 const USER_STORAGE_KEY = 'loggedInUser';
 export function checkLoginStatus() {
     const userDataString = sessionStorage.getItem('loggedInUser');
