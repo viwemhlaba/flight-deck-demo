@@ -1,6 +1,6 @@
 // main.js
-import { checkLoginStatus, logoutUser } from './auth.js';
-import { screenData as allScreenData } from './config.js';
+import { checkLoginStatus, logoutUser } from 'https://viwemhlaba.github.io/flight-deck-demo/Assets/js/auth.js';
+import { screenData as allScreenData } from 'https://viwemhlaba.github.io/flight-deck-demo/Assets/js/config.js';
 import {
     screensContainer,
     modalContainer,

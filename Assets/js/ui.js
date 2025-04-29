@@ -1,6 +1,6 @@
 
-import { screenData as allScreenData, requestADemoUrl } from "./config.js";
-import { users } from "./users.js"; 
+import { screenData as allScreenData, requestADemoUrl } from "https://viwemhlaba.github.io/flight-deck-demo/Assets/js/config.js";
+import { users } from "https://viwemhlaba.github.io/flight-deck-demo/Assets/js/users.js"; 
 
 export const screensContainer = document.getElementById("screens-container");
 export const modalContainer = document.getElementById("modal-container");

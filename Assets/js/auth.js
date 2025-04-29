@@ -1,4 +1,4 @@
-import { users } from '/users.js';
+import { users } from 'https://viwemhlaba.github.io/flight-deck-demo/Assets/js/users.js';
 const USER_STORAGE_KEY = 'loggedInUser';
 export function checkLoginStatus() {
     const userDataString = sessionStorage.getItem('loggedInUser');

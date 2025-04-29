@@ -1,5 +1,5 @@
 // Assets/js/login.js
-import { users } from './users.js'; // Import the user data
+import { users } from 'https://viwemhlaba.github.io/flight-deck-demo/Assets/js/users.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const loginForm = document.getElementById('login-form');
