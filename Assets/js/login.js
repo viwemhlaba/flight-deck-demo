@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }));
 
             // Redirect to the main index page
-            window.location.href = 'index.html'; // Or '/index.html' depending on your setup
+            window.location.href = 'login.html'; // Or '/login.html' depending on your setup
 
         } else {
             // --- Login Failed ---

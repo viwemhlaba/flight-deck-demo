@@ -511,7 +511,7 @@ export function initializeAnnouncements(loggedInUserName, screenConfig) {
 
   // --- Update Welcome Message ---
   const welcomeSpan = announcementWelcome.querySelector("span");
-  // *** MAKE SURE THIS ELEMENT EXISTS IN index.html ***
+  // *** MAKE SURE THIS ELEMENT EXISTS IN login.html ***
   const userNameElement = document.getElementById(
     "welcome-user-name-placeholder"
   );

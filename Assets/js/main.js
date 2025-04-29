@@ -150,7 +150,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             console.error("Initialization Error: Failed to load application components.");
          }
         // Optional: Redirect to login or show a generic error message on the page
-        // window.location.href = '/login.html';
+        // window.location.href = '/index.html';
     }
 }); // End DOMContentLoaded
 

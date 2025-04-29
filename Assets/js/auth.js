@@ -5,9 +5,9 @@ export function checkLoginStatus() {
 
     if (!userDataString) {
         // Not logged in, redirect to login page
-        console.log("User not logged in. Redirecting to login.html");
-        // Make sure the path to login.html is correct relative to index.html
-        window.location.replace('login.html');
+        console.log("User not logged in. Redirecting to index.html");
+        // Make sure the path to index.html is correct relative to login.html
+        window.location.replace('index.html');
         return null; // Indicate not logged in
     }
 
@@ -19,7 +19,7 @@ export function checkLoginStatus() {
         console.error("Error parsing user data from sessionStorage:", error);
         // Clear potentially corrupted data and redirect
         sessionStorage.removeItem('loggedInUser');
-        window.location.replace('login.html');
+        window.location.replace('index.html');
         return null;
     }
 
@@ -52,8 +52,8 @@ export function loginUser(username, password) {
 
 export function logoutUser() {
     sessionStorage.removeItem('loggedInUser');
-    console.log("User logged out. Redirecting to login.html");
-    window.location.replace('/login.html');
+    console.log("User logged out. Redirecting to index.html");
+    window.location.replace('/index.html');
 }
 
 // Optional: Add a logout button listener somewhere in your main UI (e.g., in main.js)
